@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul(id="todoList")
+  br
+  br
+  input(type="text" id="txtNewTodo")
+  button(id="btnAddTodo") Add New Todo
+  form(id="uploadForm" enctype="multipart/form-data" action="http://localhost:3000/uploads" method="POST")
+  input(type="file" name="images")
+  input(type="submit" value="Upload Image" name="submit")
+  script(src = "javascripts/todoOperations.js" type='text/javascript')
